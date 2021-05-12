@@ -1,0 +1,87 @@
+.movie-card {
+  height: 300px;
+  width: 200px;
+  flex-shrink: 0;
+  background-position: center;
+  background-size: cover;
+  margin: 0.8rem 2rem;
+  overflow: hidden;
+  /* box-shadow: 0px 4px 8px rgba(38, 38, 38, 1);
+   */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+.movie-card:hover {
+  backdrop-filter: blur(50px);
+}
+
+.movie-card-hidden {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card:hover .movie-card-hidden {
+  transform: translateY(0);
+  backdrop-filter: blur(3px);
+}
+
+.movie-title {
+  color: #79e6d9;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.movie-rating-box {
+  color: #f5f3f4;
+  margin-bottom: 10px;
+}
+
+.movie-rating {
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.rating-green {
+  background-color: #0b6623;
+}
+
+.rating-yellow {
+  background-color: #ffd700;
+}
+
+.rating-red {
+  background-color: #f31010;
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+}
+
+.genre-span {
+  background-color: #470024;
+  color: #f5f3f4;
+  padding: 3px;
+  margin: 1px 2px;
+  border-radius: 5px;
+  font-size: x-small;
+}
