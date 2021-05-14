@@ -1,0 +1,16 @@
+.centre-grid {
+  height: 40vh;
+  display: grid;
+  place-items: center;
+}
+
+.error {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.error p {
+  margin-top: 3rem !important;
+  text-decoration: underline;
+  font-size: 4rem;
+}

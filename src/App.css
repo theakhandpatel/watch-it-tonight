@@ -31,14 +31,3 @@
   color: antiquewhite;
   border: none;
 }
-
-.App-header .search-input:focus {
-  border-bottom: 0.1px solid #b5cbb7;
-}
-
-.movie-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
