@@ -4,11 +4,3 @@
   text-align: center;
   text-decoration: underline;
 }
-
-.movie-container {
-  padding: 1rem 2rem 4rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}

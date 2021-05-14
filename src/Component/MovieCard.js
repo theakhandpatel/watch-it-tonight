@@ -39,11 +39,19 @@ function MovieCard({ movie, genreList }) {
               </span>
             </div>
             <div className="genres-container">
-              {movie.genre_ids.map((id) => (
+              {movie.genre_ids?.map((id) => (
                 <span className="genre-span" key={id}>
                   {genreList[id]}
                 </span>
               ))}
+              {console.log(movie)}
+              {movie.genres?.map((genreObject) => {
+                return (
+                  <span className="genre-span" key={genreObject.id}>
+                    {genreObject.name}
+                  </span>
+                )
+              })}
             </div>
           </div>
         </div>
