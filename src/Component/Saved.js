@@ -50,9 +50,9 @@ function Saved() {
   ]
 
   return (
-    <div>
+    <div style={{ margin: "2rem 1rem" }}>
       <Tab
-        menu={{ color: "red", attached: true, tabular: true }}
+        menu={{ color: "red", size: "massive", vertical: true, tabular: true }}
         panes={panes}
       />
     </div>

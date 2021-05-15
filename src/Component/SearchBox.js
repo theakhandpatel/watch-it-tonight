@@ -2,7 +2,6 @@ import _ from "lodash"
 import React, { useState } from "react"
 import { Search, Grid } from "semantic-ui-react"
 import { useHistory } from "react-router-dom"
-import { Keyboard } from "@material-ui/icons"
 
 const SearchBox = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -32,31 +31,31 @@ const SearchBox = () => {
     }
   }
 
-  const onKeyPress = (e) => {
-    if (e.key === "Enter") {
-      history.push("/search?query=" + encodeURI(value))
-      Keyboard.dismiss()
-    }
-  }
+  // const onKeyPress = (e) => {
+  //   if (e.key === "Enter") {
+  //     history.push("/search?query=" + encodeURI(value))
+  //     Keyboard.dismiss()
+  //   }
+  // }
 
   return (
-    <Grid>
-      <Grid.Column width={5}>
-        <Search
-          placeholder="Search Movies here"
-          transparent
-          onKeyPress={onKeyPress}
-          aligned="left"
-          loading={isLoading}
-          onResultSelect={handleResultSelect}
-          onSearchChange={_.debounce(handleSearchChange, 500, {
-            leading: true,
-          })}
-          results={results}
-          value={value}
-        />
-      </Grid.Column>
-    </Grid>
+    // <Grid>
+    //   <Grid.Column width={5}>
+    <Search
+      placeholder="Search Movies here"
+      transparent
+      // onKeyPress={onKeyPress}
+      aligned="left"
+      loading={isLoading}
+      onResultSelect={handleResultSelect}
+      onSearchChange={_.debounce(handleSearchChange, 500, {
+        leading: true,
+      })}
+      results={results}
+      value={value}
+    />
+    //   </Grid.Column>
+    // </Grid>
   )
 }
 

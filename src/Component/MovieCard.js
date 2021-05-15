@@ -44,7 +44,6 @@ function MovieCard({ movie, genreList }) {
                   {genreList[id]}
                 </span>
               ))}
-              {console.log(movie)}
               {movie.genres?.map((genreObject) => {
                 return (
                   <span className="genre-span" key={genreObject.id}>

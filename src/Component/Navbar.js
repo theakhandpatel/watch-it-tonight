@@ -3,6 +3,7 @@ import { Menu } from "semantic-ui-react"
 
 import { NavLink } from "react-router-dom"
 import SearchBox from "./SearchBox"
+import "./Navbar.css"
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState({})
@@ -10,7 +11,7 @@ export default function Navbar() {
   const handleItemClick = (e, { name }) => setActiveItem(name)
 
   return (
-    <Menu>
+    <Menu className="navbar" inverted stackable>
       <Menu.Item
         as={NavLink}
         to="/"
@@ -39,11 +40,11 @@ export default function Navbar() {
         onClick={handleItemClick}
       />
 
-      <Menu.Menu position="right">
-        <Menu.Item>
-          <SearchBox />
-        </Menu.Item>
-      </Menu.Menu>
+      {/* <Menu.Menu position="right"> */}
+      <Menu.Item position="right">
+        <SearchBox />
+      </Menu.Item>
+      {/* </Menu.Menu> */}
     </Menu>
   )
 }

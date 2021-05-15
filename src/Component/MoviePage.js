@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import "./MoviePage.css"
-import { Button, Icon } from "semantic-ui-react"
+import { Button, Icon, Loader } from "semantic-ui-react"
 import { reactLocalStorage } from "reactjs-localstorage"
 
 function MoviePage() {
@@ -13,6 +13,7 @@ function MoviePage() {
 
   const imageAPI = "https://image.tmdb.org/t/p/"
   useEffect(() => {
+    fetchDetails()
     const favMovies = reactLocalStorage.getObject("favMovies", {}, true)
     const wishList = reactLocalStorage.getObject("wishList", {}, true)
     if (favMovies[id]) {
@@ -22,7 +23,6 @@ function MoviePage() {
     if (wishList[id]) {
       setIsWatchLater(true)
     }
-    fetchDetails()
   }, [id])
 
   const addToFav = () => {
@@ -92,7 +92,9 @@ function MoviePage() {
       </div>
     </div>
   ) : (
-    <div>"Loading"</div>
+    <Loader size="massive" active inline="centered">
+      Loading....
+    </Loader>
   )
 }
 
