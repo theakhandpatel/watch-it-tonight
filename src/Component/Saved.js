@@ -52,7 +52,13 @@ function Saved() {
   return (
     <div style={{ margin: "2rem 1rem" }}>
       <Tab
-        menu={{ color: "red", size: "massive", vertical: true, tabular: true }}
+        menu={{
+          color: "red",
+          inverted: true,
+          size: "massive",
+          vertical: true,
+          tabular: true,
+        }}
         panes={panes}
       />
     </div>
